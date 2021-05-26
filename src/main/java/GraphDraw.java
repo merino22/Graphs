@@ -280,7 +280,7 @@ public class GraphDraw extends JFrame {
             String next = String.valueOf(path.charAt(i+1));
             int nextInt = Integer.parseInt(next);
             
-            if(edges[currentInt][nextInt] == 1){
+            if(edges[currentInt-1][nextInt-1] == 1){
                 tmpArr.add(String.valueOf(nextInt));
             }
         }
