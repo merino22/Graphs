@@ -281,6 +281,11 @@ public class GraphDraw extends JFrame {
             int nextInt = Integer.parseInt(next);
             
             if(edges[currentInt-1][nextInt-1] == 1){
+                if (tmpArr.contains(String.valueOf(nextInt))) {
+                    JOptionPane.showMessageDialog(new JFrame(), "Repeated vertice introduced", "ERROR",
+        JOptionPane.ERROR_MESSAGE);
+                    return tmpArr;
+                }
                 tmpArr.add(String.valueOf(nextInt));
             }
         }
